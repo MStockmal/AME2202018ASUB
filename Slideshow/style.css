@@ -1,0 +1,36 @@
+#slideshowContainer {
+	height: calc(100% - 100px);
+	position: absolute;
+	width: 100%;
+	top:0px;
+	left:0px;
+}
+#slideshowContainer .slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: contain;
+	
+}
+#arrowContainer {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+#arrowContainer button {
+	width: 50px;
+	height: 50px;
+	font-size: 25px;
+	
+	
+}
+#numberContainer {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+.active {
+	border: 1px solid gold;
+}
