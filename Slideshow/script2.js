@@ -1,13 +1,10 @@
-var allImages = location.hash.replace("#","").split(",");
-
-
-//var allImages = [
-//	'http://www.blackriverbullmastiffs.com/cmsAdmin/uploads/thumb/13_001.jpg',
-//	'http://cdn.akc.org/Marketplace/Breeds/Bullmastiff_SERP.jpg',
-//	'https://www.europuppy.com/wp-content/uploads/2018/01/GYEN03bul171112_F3_5.jpg',
-//	'http://petlandlewiscenter.com/wp-content/uploads/2017/07/928347_800.jpg'
-//	
-//];
+var allImages = [
+	'http://www.blackriverbullmastiffs.com/cmsAdmin/uploads/thumb/13_001.jpg',
+	'http://cdn.akc.org/Marketplace/Breeds/Bullmastiff_SERP.jpg',
+	'https://www.europuppy.com/wp-content/uploads/2018/01/GYEN03bul171112_F3_5.jpg',
+	'http://petlandlewiscenter.com/wp-content/uploads/2017/07/928347_800.jpg'
+	
+];
 
 var currentSlide = 1;
 
@@ -33,19 +30,13 @@ var start = function () {
 
 var goToSlide = function(n, d) {
 	//$("#slideshowContainer .slide").animate({"margin-left": "-100%"});
-	currentSlide = n;
-	for (var i=0; i < allImages.length +1 ; i++) {
-		if (i > n) {
-			$("#slideshowContainer .slide:nth-of-type(" + i +")").animate({"margin-left": "200%"});
-		}
-		else if (i < n) {
-			$("#slideshowContainer .slide:nth-of-type(" + i +")").animate({"margin-left": "-100%"});
-		}
-		else if (i==n) {
-			$("#slideshowContainer .slide:nth-of-type(" + i +")").animate({"margin-left": ""})
-		}
+	if (n < currentSlide) {
+		$("#slideshowContainer .slide").stop().animate({"margin-left": "-100%"}, 1000);
+		$("#slideshowContainer .slide:nth-of-type(" + currentSlide + ")").stop().animate({"margin-left":"-100%"},1000);
+		$("#slideshowContainer .slide:nth-of-type(" + n + ")").stop().css({"margin-left":"100%"}).animate({"margin-left":"0%"},1000);
 		
 	}
+	currentSlide = n;
 	
 	
 	
