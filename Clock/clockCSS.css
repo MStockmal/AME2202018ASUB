@@ -1,0 +1,89 @@
+#clockWrapper {
+	height: 300px;
+	width: 300px;
+	margin: auto;
+	border: double 10px;
+	border-radius: 200px;
+}
+.num {
+	text-align: center;
+	position: absolute;
+	transform: translate(150px);
+	
+}
+#num1 {
+	transform: translate(150px) rotate(30deg);
+	transform-origin: 0px 150px;	
+}
+#num2 {
+	transform: translate(150px) rotate(60deg);
+	transform-origin: 0px 150px;	
+}
+#num3 {
+	transform: translate(150px) rotate(90deg);
+	transform-origin: 0px 150px;	
+}
+#num4 {
+	transform: translate(150px) rotate(120deg);
+	transform-origin: 0px 150px;	
+}
+#num5 {
+	transform: translate(150px) rotate(150deg);
+	transform-origin: 0px 150px;	
+}
+#num6 {
+	transform: translate(150px) rotate(180deg);
+	transform-origin: 0px 150px;	
+}
+#num7 {
+	transform: translate(150px) rotate(210deg);
+	transform-origin: 0px 150px;	
+}
+#num8 {
+	transform: translate(150px) rotate(240deg);
+	transform-origin: 0px 150px;	
+}
+#num9 {
+	transform: translate(150px) rotate(270deg);
+	transform-origin: 0px 150px;	
+}
+#num10 {
+	transform: translate(150px) rotate(300deg);
+	transform-origin: 0px 150px;	
+}
+#num11 {
+	transform: translate(150px) rotate(330deg);
+	transform-origin: 0px 150px;	
+}
+span#digit1 {
+	position: absolute;
+	transform-origin: center;
+	transform: rotate(-30deg);
+}
+.hand {
+	height: 150px;
+	width: 2px;
+	position: absolute;
+/*	background: red;*/
+	transform: translate(150px);
+	transform-origin: 0px 150px;
+}
+.hand#minute {
+	height: 150px;
+	width: 2px;
+	background-color: orange;
+}
+.hand#hour {
+	height: 75px;
+	width: 2px;
+	transform: translate(150px, 75px);
+	transform-origin: 0px 75px;
+	background-color: violet;
+}
+.hand#second {
+	height: 100px;
+	transform: translate(150px, 50px);
+	transform-origin: 0px 100px;
+	width: 2px;
+	background-color: navy
+}
